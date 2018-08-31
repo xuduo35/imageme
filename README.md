@@ -33,6 +33,7 @@ Run `python imageme.py port` to provide images browsing service
 > cd /path/to/my/pics
 > python imageme.py 8000
 Your images are at http://127.0.0.1:8000/imageme.html
+```
 
 Run `python imageme.py cleanup` to clean imageme.html after usage
 
