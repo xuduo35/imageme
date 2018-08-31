@@ -1,44 +1,19 @@
-# [imageMe](http://www.imageme.xyz/)
+# [imageMe]
 
 imageMe is a super simple image gallery server.
 
 Think `python -m SimpleHTTPServer` for pictures.
 
-![](http://www.imageme.xyz/images/screenshots/image_index.png)
-
-## Super Duper Easy One Line Usage
-
-To run the image server on port 8000:
-
-```bash
-curl https://cdn.rawgit.com/unwitting/imageme/master/imageme.py | python
-```
-
 ## Manual Usage
 
-### Step 1: Get the File
-
-Get hold of a copy of `imageme.py`. For _really_ easy use put it in your `PATH`.
-
-You could clone this repo:
-
-```bash
-> git clone https://github.com/unwitting/imageme.git
-```
-
-Or just grab the file directly:
-
-```bash
-> wget https://cdn.rawgit.com/unwitting/imageme/master/imageme.py
-```
-
+### Step 1: Get the File `imageme.py`
 ### Step 2: Run imageMe
 
-Run `imageme.py` from the root directory to serve from:
+Run `python imageme.py generate` to generate imageme.html
 
 ```bash
 > cd /path/to/my/pics
-> imageme.py
+> python imageme.py generate
 Processing .
 Creating index file ./imageme.html
 Processing ./photos
@@ -52,13 +27,20 @@ Creating index file ./super_secret_stay_out/imageme.html
 Your images are at http://127.0.0.1:8000/imageme.html
 ```
 
-You can specify a port, just like you can with `SimpleHTTPServer`:
+Run `python imageme.py port` to provide images browsing service
 
 ```bash
-> imageme.py 5678
-Processing .
-...
-Your images are at http://127.0.0.1:5678/imageme.html
+> cd /path/to/my/pics
+> python imageme.py 8000
+Your images are at http://127.0.0.1:8000/imageme.html
+
+Run `python imageme.py cleanup` to clean imageme.html after usage
+
+```bash
+> cd /path/to/my/pics
+> python imageme.py cleanup
+Attempting to import from PIL...
+Success! Enjoy your supercharged imageMe.
 ```
 
 ## Browse and Enjoy
